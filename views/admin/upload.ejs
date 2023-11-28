@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-5">
+                <h3 class="text-center"><%= title %></h3>
+                <% if (typeof message!="undefined") { %>             
+                    <div class="alert alert-<%= message.class %>" role="alert">
+                        <%= message.text %>
+                    </div>
+                <% } %>
+                <div class="card my-4">
+                    <h5 class="card-header">Upload File</h5>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="row">
+                                <div class="radioButtons d-flex my-3">
+                                    <h6 class="me-2">Choose Your Process: </h6>
+                                    <div class="form-check me-2">
+                                        <input class="form-check-input" type="radio" name="processType" id="processUpdate" value="updateDatas">
+                                        <label class="form-check-label" for="processUpdate">
+                                          Update
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="processType" id="processCreate" value="createData">
+                                        <label class="form-check-label" for="processCreate">
+                                          Create 
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="uploadForWhat" class="form-label">About: </label>
+                                    <select class="form-select mb-2" name="uploadForWhat" >
+                                        <option selected value="-1">Choose your file is about what</option>
+                                        <option value="1">Platform</option>
+                                        <option value="2">Category</option>
+                                        <option value="3">Email</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="excelFile" class="form-label">Choose Your File</label>
+                                    <input class="form-control" type="file" id="excelFile" name="excelFile">
+                                </div>
+                                <div class="col-md-2 mt-4 d-flex justify-content-center align-items-center">
+                                    <button type="submit" class="btn btn-warning">Upload</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>

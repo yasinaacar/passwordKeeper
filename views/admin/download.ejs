@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-5">
+                <h3 class="text-center"><%= title %></h3>
+                <% if (typeof message != "undefined") { %>
+                    <div class="alert alert-<%= message.class %> " role="alert">
+                        <p><%= message.text %></p>
+                    </div>
+                <% } %>
+                <div class="card my-4">
+                    <h5 class="card-header">Download Categories</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Categories</h5>
+                      <p class="card-text">You can download all category data like excel documentation</p>
+                      <form method="post">
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="categoriesForData">Download for see data</button>
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="categoriesForUpdate">Download for update</button>
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="categoriesForAdd">Download for add new data</button>
+                      </form>
+                    </div>
+                </div>
+                <div class="card my-4">
+                    <h5 class="card-header">Download Platforms</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Platforms</h5>
+                      <p class="card-text">You can download all category data like excel documentation</p>
+                      <form method="post">
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="platformsForData">Download for see data</button>
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="platformsForUpdate">Download for update</button>
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="platformsForAdd">Download for add new data</button>
+                      </form>
+                    </div>
+                </div>
+                <div class="card my-4">
+                    <h5 class="card-header">Download E-mails</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">E-mails</h5>
+                      <p class="card-text">You can download all category data like excel documentation</p>
+                      <form method="post">
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="emailsForData">Download for see data</button>
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="emailsForUpdate">Download for update</button>
+                          <button type="submit" class="btn btn-warning mx-1" name="fileToDownload" value="emailsForAdd">Download for add new data</button>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>

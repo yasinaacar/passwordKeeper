@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h3 class="text-center my-5"><%= title %></h3>
+                <form method="post">
+                    <div class="row mb-3 d-flex justify-content-center align-items-center" style="height: 50vh;">
+                        <label for="roleName" class="col-sm-2 col-form-label">Role Name :</label>
+                        <div class="col-sm-10 d-flex">
+                            <input class="form-control" type="text" placeholder="Write Role Name" id="roleName" name="roleName" value="<%= role.rolename %>">
+                            <input type="hidden" name="roleId" value="<%= role.id %>">
+                            <button type="submit" class="btn greenThemeBtn ms-3">Update</button>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-sm-12">
+                            <h5>How many users: <b><%= count %></b></h5>
+                            <table class="table table-striped table-hover table-bordered">
+                                <thead>
+                                    <th>#id</th>
+                                    <th>Name</th>
+                                    <th>E-Mail</th>
+                                    <th></th>
+                                </thead>
+                                <tbody>
+                                    <% role.users.forEach(userInfo => { %>                         
+                                        <tr>
+                                            <td><%= userInfo.id %></td>
+                                            <td><%= userInfo.fullName %></td>
+                                            <td><%= userInfo.email %></td>
+                                            <td>
+                                              <div class="listDirectionBtn">
+                                                <a href="/admin/user/remove/<%= userInfo.id %>" class="deleteBtn"><i class="fa-solid fa-trash"></i></a>
+                                              </div>
+                                            </td>
+                                        </tr>
+                                    <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h3 class="text-center my-5"><%= title %></h3>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-12 mt-3">
+                            <div class="alert alert-secondary">
+                                <div class="card mb-3" style="background-color: transparent; border: none;">
+                                    <div class="row g-0">
+                                      <div class="col-md-2 d-flex justify-content-center">
+                                        <img src="/static/img/<%= platform.logo %>" class="img-fluid rounded-start" alt="...">
+                                      </div>
+                                      <div class="col-md-10 ">
+                                        <div class="card-body">
+                                          <h3 class="card-title"><%= platform.platformName %></h3>
+                                          <ul>
+                                            <li><h5 class="card-text"><b>Id: </b><%= platform.id %></h5></li>
+                                            <li><h5 class="card-text"><b>Category: </b>Social</h5></li>
+                                            <li><h5 class="card-text"><b>E-Mail: </b>deneme@outlook.com</h5></li>
+                                            <li><h5 class="card-text"><b>Password: </b>123456</h5></li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <h5>Are you sure about delete this platform?</h5>
+                                <form method="post" class="d-flex justify-content-end">
+                                <input type="hidden" name="logo" value="<%= platform.logo %>">
+                                <input type="hidden" name="platformId" value="<%= platform.id %>" >
+                                <button class="btn btn-danger px-4" type="submit">Yes</button>
+                                <a href="/admin/platforms" class="btn btn-primary mx-2">Cancel</a>
+                                </form>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>

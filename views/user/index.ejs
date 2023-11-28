@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+
+    <%- include('../partials/nav') %>
+    
+    <div class="container d-flex align-items-center justify-content-center" style="height: 100vh;">
+        <div class="row">
+            <div class="col-12">
+                <div class="card generatorCard">
+                    <div class="card-header bg-green">
+                        <i class="fa-solid fa-key fa-shake me-2"></i>Password Generator
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <div class="my-3 d-flex">
+                            <input type="text" class="form-control" id="password" placeholder="Press to button for generate">
+                            <button type="submit" class="btn greenThemeBtnOutline ms-2 copyBtn" id="copyBtn"><i class="fa-solid fa-copy"></i></button>
+                            <button type="submit" class="btn greenThemeBtn mx-2 generateBtn" id="generateBtn">Generate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('../partials/script') %>
+    <script src="/static/js/generate.js"></script>
+</body>
+</html>

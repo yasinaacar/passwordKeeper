@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h3 class="text-center my-5"><%= title %></h3>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-12 mt-3">
+                           <div class="alert alert-secondary">
+                                <p class="mb-3 row">
+                                <h5>Are you sure want to delete the item 
+                                    <ul class="my-2">
+                                        <li>ID: <b><%= email.id %></b></li>
+                                        <li>E-mail Adress: <b><%= email.email %></b></li>
+                                    </ul>
+                                </h5>
+                                </p>
+                                <form method="post" class="d-flex justify-content-end">
+                                <input type="hidden" name="mailId" value="<%= email.id %>" >
+                                <button class="btn btn-danger px-4" type="submit">Yes</button>
+                                <a href="/admin/emails" class="btn btn-primary mx-2">Cancel</a>
+                                </form>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>

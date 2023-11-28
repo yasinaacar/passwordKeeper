@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h3 class="text-center my-5"><%= title %></h3>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-md-12 mt-3">
+                            <div class="alert alert-warning">
+                                <p class="mb-3 row">
+                                <h5>Are you sure want to delete the category 
+                                    <ul class="my-2">
+                                        <li>ID: <b><%= category.id %></b></li>
+                                        <li>Name: <b><%= category.categoryName %></b></li>
+                                    </ul>
+                                </h5>
+                                </p>
+                                <form method="post" class="d-flex justify-content-end">
+                                <input type="hidden" name="categoryId" value="<%= category.id %>" >
+                                <button class="btn btn-danger px-4" type="submit">Yes</button>
+                                <a href="/admin/categories" class="btn btn-primary mx-2">Cancel</a>
+                                </form>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>

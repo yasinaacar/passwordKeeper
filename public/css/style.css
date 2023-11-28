@@ -1,0 +1,92 @@
+.navbar{
+    background-color: #7DCE13;
+}
+.navbar .container-fluid{
+    margin: 2px 15px;
+
+}
+
+.navbar .nav-link{
+    color: #fff;
+    margin: 0px 5px;
+}
+
+.navbar .nav-link:hover{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.listDirectionBtn{
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.listDirectionBtn a{
+    margin: 0px 5px;
+    color: gray;
+}
+
+.generatorCard{
+    width: 100%;
+    height: 300px;
+}
+
+.generatorCard .card-body{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.text-green{
+   color: #7DCE13; 
+}
+.bg-green{
+    background-color: #7DCE13;
+    color: #fff;
+}
+
+.greenThemeBtn{
+    background-color: #7DCE13;
+    color: #fff;
+}
+
+.greenThemeBtnOutline{
+    border: 1px solid #7DCE13;
+    color: #7DCE13;
+    background-color: #EDE4E0;
+}
+
+.greenThemeBtnOutline:hover{
+    background-color: #7DCE13;
+    color: #fff;
+}
+
+
+.greenThemeBtn:hover{
+    border: 1px solid #7DCE13;
+    color: #7DCE13;
+    background-color: #EDE4E0;
+}
+
+.addFavoriteBtn:hover{
+    color: #D80032 !important;
+}
+
+.editBtn:hover{
+    color: #6499E9 ;
+}
+
+.deleteBtn:hover{
+    color: #e31142 !important;
+}
+
+.isFavorite{
+    color: red !important;
+}
+
+.isPrivDisabled{
+    display: none;
+}

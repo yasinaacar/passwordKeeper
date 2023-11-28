@@ -1,0 +1,80 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><i class="fa-solid fa-lock"></i> myPassword</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav me-auto">
+          <% if (isAuth) { %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/admin/emails" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                E-Mail
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/admin/email/create">Add E-Mail</a></li>
+                <li><a class="dropdown-item" href="/admin/emails">E-Mail List</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/admin/platforms" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Platforms
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/admin/platform/create">Add Platform</a></li>
+                <li><a class="dropdown-item" href="/admin/platforms">Platform List</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/admin/categories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/admin/category/create">Add Category</a></li>
+                <li><a class="dropdown-item" href="/admin/categories">Category List</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/admin/excel/download" aria-current="page">Download</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/admin/excel/upload" aria-current="page">Upload</a>
+            </li>
+            <% if (isAdmin) { %>             
+              <li class="nav-item ">
+                <a class="nav-link" href="/admin/users/" aria-current="page">Users</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="/admin/emails" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Roles
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/admin/role/create">Add Role</a></li>
+                  <li><a class="dropdown-item" href="/admin/roles">Role List</a></li>
+                </ul>
+              </li>
+            <% } %>
+          <% } %>
+        </ul>
+      <ul class="navbar-nav ms-auto">
+        <% if (isAuth) { %>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/"><%= fullname %></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border rounded px-4" aria-current="page" href="/auth/logout">Logout</a>
+          </li>
+        <% } else { %>        
+          <li class="nav-item">
+            <a class="nav-link border rounded px-4" aria-current="page" href="/auth/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/register">Sign up</a>
+          </li>
+        <% } %>
+         
+
+        </ul>
+    </div>
+  </div>
+</nav>

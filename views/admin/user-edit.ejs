@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+    <%- include('../partials/nav') %>
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h3 class="text-center my-5"><%= title %></h3>
+                <form method="post">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row mb-3">
+                                <label for="fullName" class="col-sm-2 col-form-label">Full Name :</label>
+                                <div class="col-sm-10 d-flex">
+                                    <input class="form-control" type="text" id="fullName" name="fullName" value="<%= user.fullName %>" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="email" class="col-sm-2 col-form-label">E-Mail :</label>
+                                <div class="col-sm-10 d-flex">
+                                    <input class="form-control" type="text" id="email" name="email" value="<%= user.email %>" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 ms-5">
+                            <div class="row">
+                                <h5 class="border-bottom pb-2">Roles</h5>
+                                <% roles.forEach(role => { %>                                 
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="role_<%= role.id %>" name="roles[]"
+                                        value="<%= role.id %>" <%= user.roles.some(rol=> rol.id==role.id) ? "checked": "" %>>
+                                        <label class="form-check-label" for="role_<%= role.id %>">
+                                          <%= role.rolename %>
+                                      </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row d-flex justify-content-center mt-4">
+                        <input type="hidden" name="userId" value="<%= user.id %>">
+                        <button type="submit" class="btn greenThemeBtn ms-3" style="width: 180px;">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('../partials/script') %>
+</body>
+</html>
