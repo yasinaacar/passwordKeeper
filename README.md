@@ -92,5 +92,5 @@ Bu proje kullanıcının çeşitli platfomlarda kayıtlı olan hesap bilgilerini
 ## Eklenecekler
 #### - Config dosyaları
 
-## Hata ve Öeneriler İçin:
+## Hata ve Öneriler İçin:
 [Bana Ulaş](mailto:yasinaacar@outlook.com)
