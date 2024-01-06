@@ -73,14 +73,18 @@ Bu proje kullanıcının çeşitli platfomlarda kayıtlı olan hesap bilgilerini
     `$ npm i sequelize@6.21.4`
 
 ## Uygulama Ekranları
-![Screenshot_7](https://github.com/yasinaacar/cinemovie/assets/70544990/63dd9b95-346a-4ade-a70d-58f181095b1d)
-![Screenshot_6](https://github.com/yasinaacar/cinemovie/assets/70544990/2efc842b-0486-49e3-ad43-7139339736e2)
-![Screenshot_5](https://github.com/yasinaacar/cinemovie/assets/70544990/db74907a-482a-4862-a154-7ab285e2ea47)
-![Screenshot_4](https://github.com/yasinaacar/cinemovie/assets/70544990/ea53f5f5-b6b7-40ea-a9fc-61083065d4ae)
-![Screenshot_3](https://github.com/yasinaacar/cinemovie/assets/70544990/92e48456-c6f5-43a8-8ea1-dc56b12e7ee4)
-![Screenshot_2](https://github.com/yasinaacar/cinemovie/assets/70544990/6ac7a9f4-63dd-43e1-995c-24f247de3cc7)
-![Screenshot_1](https://github.com/yasinaacar/cinemovie/assets/70544990/86ec88a7-4f4b-4363-af9f-74ef02b71720)
-![1](https://github.com/yasinaacar/cinemovie/assets/70544990/e9bd8178-e2d0-49e7-8b39-614813f14395)
+![users](https://github.com/yasinaacar/passwordKeeper/assets/70544990/bcdefa09-c784-4812-8c09-bf0033ca8925)
+![roles](https://github.com/yasinaacar/passwordKeeper/assets/70544990/0a4f5a7e-2cbe-4c03-a621-fef06a29e009)
+![platforms](https://github.com/yasinaacar/passwordKeeper/assets/70544990/cc460c9b-b66f-4885-98ee-e448224bcc35)
+![platform-edit](https://github.com/yasinaacar/passwordKeeper/assets/70544990/9bdc4d93-c641-4020-9db0-e414895917a7)
+![emails](https://github.com/yasinaacar/passwordKeeper/assets/70544990/b0915e46-d985-473b-a151-61dc507972a2)
+![edit-email](https://github.com/yasinaacar/passwordKeeper/assets/70544990/36e1b338-8334-4f18-ac91-c37d4df80332)
+![download-excel](https://github.com/yasinaacar/passwordKeeper/assets/70544990/c35107fb-99ea-442e-97cd-7f65ecb6e3d4)
+![delete-platforms](https://github.com/yasinaacar/passwordKeeper/assets/70544990/7ba3f27a-cc8e-4397-b7a2-6450ed9fd70a)
+![categories](https://github.com/yasinaacar/passwordKeeper/assets/70544990/aa478139-b2cf-41d0-a07b-8d67272a2bb5)
+![admin](https://github.com/yasinaacar/passwordKeeper/assets/70544990/98fd2881-1c9a-4007-9057-3e9e9d886437)
+
+
 
 
 
