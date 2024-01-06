@@ -32,7 +32,7 @@ Bu proje kullanıcının çeşitli platfomlarda kayıtlı olan hesap bilgilerini
 - "Upload" sayfasına giderek yüklenecek excel dosyasının verileri güncelleme için mi yoksa yeni veriler için mi ekleneceğini seçtikten sonra
 - Eklenecek excel dosyasının hangi ögeyle alakalı olduğunu (platform, e-posta, kategori) belirterek dosyanızı yükleyebilirsiniz.
 - Bu sayede tüm platformlardaki bilgilerinizi el ile tek tek eklemenize gerek kalmaz.
--  
+  
 ### Kullanıcılar
 - Sadece admin rolündeki kullanıcıların erişebileceği bu sayfada sisteme kayıtlı hherhangi bir kullanıcıya ait sadece kullanıcı adı ve e-posta adresini görüntüleyebilir ve kullanıcıya çeşitli roller atayarak kullanıcının uygulama içi erişim hakkını arttırabilir.
 
@@ -68,6 +68,7 @@ Bu proje kullanıcının çeşitli platfomlarda kayıtlı olan hesap bilgilerini
 #### nodemailer:
 - E-posta göndermek için kullanılır.
     `$ npm i nodemailer@6.9.3`
+  Sisteme yeni kaydolan kullanıcıya otomatik mail gönderilir. Aynı zamanda kullanıcı şifresini unuttuğunda yine bu paket sayesinde kullanıcıya şifre yenileme maili gönderilir.
 #### sequelize:
 - ORM (Object-Relational Mapping) kütüphanesi olarak kullanılır. Veritabanı işlemlerini kolaylaştırır ve ilişkisel veritabanlarıyla etkileşimi sağlar.
     `$ npm i sequelize@6.21.4`
